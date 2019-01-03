@@ -1,7 +1,7 @@
 node {
     stage('Example') {
         try {
-            withDockerContainer('hashicorp/terraform:light').inside(--entrypoint=/bin/sh) {
+            withDockerContainer(args: '--entrypoint=/bin/sh', image: 'hashicorp/terraform:light') {
 			  sh 'terraform --version'
 			}
 
