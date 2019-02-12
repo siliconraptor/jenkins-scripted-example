@@ -16,10 +16,12 @@ spec:
 	node(labelBuild) {
 	    stage('Example') {
 	        try {
+			
 	            container('golang') {
 				  sh 'ls -lart'
-			          findCurrentVersion{}
+			          
 				}
+			findCurrentVersion{}
 	
 	        }
 	        catch (exc) {
