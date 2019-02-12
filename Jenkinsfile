@@ -13,10 +13,10 @@ spec:
 )
 
 {
-	node {
+	node(labelBuild) {
 	    stage('Example') {
 	        try {
-	            withDockerContainer(args: '--entrypoint=""', image: 'hashicorp/terraform:light') {
+	            container('golang') {
 				  sh 'ls -lart'
 				}
 	
