@@ -18,6 +18,7 @@ spec:
 	        try {
 	            container('golang') {
 				  sh 'ls -lart'
+			          findCurrentVersion{}
 				}
 	
 	        }
