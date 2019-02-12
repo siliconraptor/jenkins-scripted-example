@@ -7,7 +7,7 @@ kind: Pod
 spec:
   containers:
   - name: golang
-    image: image: 981303859063.dkr.ecr.us-west-2.amazonaws.com/golang:1.11.5-dep
+    image: 981303859063.dkr.ecr.us-west-2.amazonaws.com/golang:1.11.5-dep
     tty: true
 """
 )
