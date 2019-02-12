@@ -6,8 +6,8 @@ apiVersion: v1
 kind: Pod
 spec:
   containers:
-  - name: terraform
-    image: hashicorp/terraform:light
+  - name: golang
+    image: image: 981303859063.dkr.ecr.us-west-2.amazonaws.com/golang:1.11.5-dep
     tty: true
 """
 )
@@ -17,7 +17,7 @@ spec:
 	    stage('Example') {
 	        try {
 	            withDockerContainer(args: '--entrypoint=""', image: 'hashicorp/terraform:light') {
-				  sh 'terraform --version'
+				  sh 'ls -lart'
 				}
 	
 	        }
