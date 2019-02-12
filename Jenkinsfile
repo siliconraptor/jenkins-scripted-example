@@ -21,7 +21,7 @@ spec:
 				  sh 'ls -lart'
 			          
 				}
-			currentVersion = findCurrentVersion{}
+			def currentVersion = findCurrentVersion{}
 			
 			println ("Current Version is " + currentVersion)
 	
