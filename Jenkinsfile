@@ -21,7 +21,9 @@ spec:
 				  sh 'ls -lart'
 			          
 				}
-			findCurrentVersion{}
+			currentVersion = findCurrentVersion{}
+			
+			println (Current Version is " + currentVersion)
 	
 	        }
 	        catch (exc) {
