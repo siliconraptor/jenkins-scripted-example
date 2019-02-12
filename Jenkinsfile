@@ -23,7 +23,7 @@ spec:
 				}
 			currentVersion = findCurrentVersion{}
 			
-			println (Current Version is " + currentVersion)
+			println ("Current Version is " + currentVersion)
 	
 	        }
 	        catch (exc) {
