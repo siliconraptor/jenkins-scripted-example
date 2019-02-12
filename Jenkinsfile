@@ -21,9 +21,15 @@ spec:
 				  sh 'ls -lart'
 			          
 				}
-			def currentVersion = findCurrentVersion{}
+			def version = findCurrentVersion{}
 			
-			println ("Current Version is " + currentVersion)
+			println ("Current Version is " + version)
+			
+			def newVersion = incrementVersion {
+			currentVersion = version
+			}
+			
+			println ("New Version is " + newVersion)
 	
 	        }
 	        catch (exc) {
