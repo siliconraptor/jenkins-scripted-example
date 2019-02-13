@@ -16,27 +16,14 @@ spec:
 	node(labelBuild) {
 	    stage('Example') {
 	        try {
-			
-	            container('golang') {
-				  sh 'ls -lart'
-			          
+				withGitVersionStrategy{
+					echo "finished"
 				}
-			def version = findCurrentVersion{}
-			
-			println ("Current Version is " + version)
-			
-			def newVersion = incrementVersion {
-			currentVersion = version
-			}
-			
-			println ("New Version is " + newVersion)
-	
 	        }
 	        catch (exc) {
 	            echo 'Something failed, I should sound the klaxons!'
-		    currentBuild.result = 'FAILURE'
+				currentBuild.result = 'FAILURE'
 	        }
 	    }
 	}
 }
-
