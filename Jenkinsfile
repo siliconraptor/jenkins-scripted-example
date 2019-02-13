@@ -17,7 +17,7 @@ spec:
 	    stage('Example') {
 	        try {
 				withGitVersionStrategy{
-					echo "finished"
+					sh 'echo finishing..'
 				}
 	        }
 	        catch (exc) {
