@@ -26,7 +26,7 @@ spec:
 			println ("Current Version is " + version)
 			
 			def newVersion = incrementVersion {
-			currentVersion = "1.1.0"
+			currentVersion = version
 			}
 			
 			println ("New Version is " + newVersion)
